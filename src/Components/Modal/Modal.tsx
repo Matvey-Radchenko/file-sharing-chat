@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Transition } from 'react-transition-group';
+import { Context } from '../../Context/Context';
 import SignIn from '../SignIn/SignIn';
 import SignUp from '../SignUp/SignUp';
 
 import './Modal.css';
 
-interface ModalProps {
-  // eslint-disable-next-line no-unused-vars
-  setModal: (value: boolean | ((prev: boolean) => boolean)) => void;
-  modal:boolean;
-}
-
-function Modal({ modal, setModal }:ModalProps) {
+function Modal() {
   const [active, setActive] = useState('signin');
+  const { modal, setModal } = useContext(Context);
 
   return (
     <Transition

@@ -23,8 +23,6 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'import/extensions': 0,
-    // 'jsx-a11y/click-events-have-key-events': 0,
-    // 'jsx-a11y/no-static-element-interactions': 0,
   },
   settings: {
     'import/resolver': {
@@ -33,4 +31,12 @@ module.exports = {
       },
     },
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        'no-undef': 'off',
+      },
+    },
+  ],
 };

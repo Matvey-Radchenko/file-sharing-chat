@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import NavBar from '../components/NavBar/NavBar';
-import Modal from '../components/Modal/Modal';
+import React from 'react';
+import NavBar from '../Components/NavBar/NavBar';
+import Modal from '../Components/Modal/Modal';
+import { ContextProvider } from '../Context/Context';
 
 import './App.css';
 
 function App() {
-  const [modal, setModal] = useState<boolean>(false);
   return (
-    <div className="App">
-      <NavBar setModal={setModal} />
-      <Modal modal={modal} setModal={setModal} />
-    </div>
+    <ContextProvider>
+      <div className="App">
+        <NavBar />
+        <Modal />
+      </div>
+    </ContextProvider>
   );
 }
 

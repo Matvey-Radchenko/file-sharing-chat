@@ -43,6 +43,7 @@
   height: 100%;
   width: 50px;
   background-color: white;
+  border-radius: 15px 0px 0px 15px;
 
   display: flex;
   align-items: center;
@@ -54,12 +55,13 @@
   height: 100%;
   width: 350px;
   padding-left: 20px;
+  border-radius: 0px 15px 15px 0px;
 
   border: none;
   outline: none;
   background-color: rgba(255, 255, 255, 0.2);
     
-  color: rgba(80, 80, 80, 0.7);
+  color: rgba(80, 80, 80);
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
   font-size: 15px;
@@ -71,7 +73,6 @@
 }
 
 .btn-in {
-
   height: 40px;
   width: 400px;
   border-radius: 15px;

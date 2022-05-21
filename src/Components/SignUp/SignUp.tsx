@@ -29,7 +29,7 @@ function SignUp() {
         <input className="inp" type="text" placeholder="Пароль" />
       </div>
 
-      <button className="btn-in" type="submit">Войти</button>
+      <button className="btn-in" type="submit">Зарегестрироваться</button>
     </div>
   );
 }
