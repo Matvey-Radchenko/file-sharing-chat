@@ -18,15 +18,16 @@ const initState = {
 
 export const Context = createContext<contextProps>(initState);
 
-interface props {
+interface providerProps {
   children: JSX.Element
 }
 
-export function ContextProvider({ children }: props) {
+export function ContextProvider({ children }: providerProps) {
   const [user, setUser] = useState(false);
   const [modal, setModal] = useState<boolean>(false);
 
   return (
+    // eslint-disable-next-line react/jsx-no-constructed-context-values
     <Context.Provider value={{
       modal,
       setModal,
